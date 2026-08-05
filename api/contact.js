@@ -10,22 +10,3 @@ export default function handler(req, res){
     });
 }
 
-//Prueba de comunicación con la API
-
-const testButton = document.querySelector("#test-api");
-
-testButton.addEventListener("click", async () => {
-
-    console.log("Botón presionado");
-
-    const response = await fetch("/api/contact", {
-        method: "POST",
-    });
-
-    console.log("Status:", response.status);
-
-    const data = await response.json();
-
-    console.log("Respuesta:", data);
-
-});
