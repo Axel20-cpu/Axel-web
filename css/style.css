@@ -753,6 +753,10 @@ body{
     transform: translateY(0);
 }
 
+.honeypot{
+    display: none;
+}
+
 /*==========================
     MENSAJES DEL FORMULARIO
 ==========================*/

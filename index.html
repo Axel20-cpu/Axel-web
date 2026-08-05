@@ -412,7 +412,7 @@
                         
 
                         <div>
-                            <a href="https://wa.me/543436213877?text=Hola%20Axel,%20vi%20tu%20portfolio%20y%20me%20interesa%20solicitar%20informaci%C3%B3n%20sobre%20una%20p%C3%A1gina%20web." class="contact-card whatsapp-card" target="_blank"           rel="noopener noreferrer">
+                            <a href="https://wa.me/543436213877?text=Hola%20Axel,%20vi%20tu%20portfolio%20y%20me%20interesa%20solicitar%20informaci%C3%B3n%20sobre%20una%20p%C3%A1gina%20web." class="contact-card whatsapp-card" target="_blank" rel="noopener noreferrer">
                                 <i class="fa-brands fa-whatsapp"></i>
 
                                 <div>
@@ -426,7 +426,10 @@
 
                 <div class="contact-form">
                     <form id="contact-form" method="post">
-                        <input type="text" name="name" placeholder="Tu nombre" required>
+
+                    <input type="text" name="website" autocomplete="off" tabindex="-1" class="honeypot">
+                    
+                    <input type="text" name="name" placeholder="Tu nombre" required>
                     <input type="email" name="email" placeholder="Tu correo electronico" required>
                     <textarea name="message" placeholder="Contame sobre tu proyecto..." rows="6" required></textarea>
                     <button type="submit" class="btn">Enviar mensaje</button>

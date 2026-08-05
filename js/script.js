@@ -86,6 +86,23 @@ form.addEventListener("submit", (event) => {
 
     event.preventDefault();
 
+    //Validacion de campos vacíos
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+    const website = form.website.value.trim(); // Obtener el valor del campo honeypot
+
+    // Verificar si el campo honeypot está lleno
+    if (website){
+        return; // Si el campo honeypot tiene valor, no enviar el formulario    
+    }
+
+    if (!name || !email || ! message) {
+        formMessage.textContent = "❌ Por favor completá todos los campos.";
+        formMessage.className = "error-message show";
+        return;
+    }
+
     // Limpiar mensaje anterior
     formMessage.textContent = "";
     formMessage.className = "";
