@@ -82,7 +82,7 @@ const form = document.querySelector("#contact-form");
 const submitButton = form.querySelector("button");
 const formMessage = document.querySelector("#form-message");
 
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
 
     event.preventDefault();
 
