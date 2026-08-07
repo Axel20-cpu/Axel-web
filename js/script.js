@@ -111,9 +111,12 @@ form.addEventListener("submit", async (event) => {
     submitButton.disabled = true;
     submitButton.textContent = "Enviando...";
 
+    //Obtener el token generado por Turnstile
+    const turnstileToken = document.querySelector(
+        '[name="cf-turnstile-response"]'
+    ).value;
 
     //PRUEBA de comunicación con la API
-
     const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -122,7 +125,8 @@ form.addEventListener("submit", async (event) => {
         body: JSON.stringify({
             name,
             email,
-            message
+            message,
+            turnstileToken
         })
     });
 
