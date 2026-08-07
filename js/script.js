@@ -133,10 +133,6 @@ form.addEventListener("submit", async (event) => {
 
 
 
-
-
-
-    /*
     emailjs.sendForm(
         "service_ds63lij",
         "template_zpeqz18",
@@ -172,7 +168,7 @@ form.addEventListener("submit", async (event) => {
         submitButton.textContent = "Enviar mensaje";
 
     });
-    */
+    
 });
 
 window.addEventListener("scroll", () => {
