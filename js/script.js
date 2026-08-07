@@ -111,6 +111,32 @@ form.addEventListener("submit", (event) => {
     submitButton.disabled = true;
     submitButton.textContent = "Enviando...";
 
+
+    //PRUEBA de comunicación con la API
+
+    const response = fetch("/api/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name,
+            email,
+            message
+        })
+    });
+
+    const data = await response.json();
+    console.log(data);
+
+    
+
+
+
+
+
+
+    /*
     emailjs.sendForm(
         "service_ds63lij",
         "template_zpeqz18",
@@ -146,7 +172,7 @@ form.addEventListener("submit", (event) => {
         submitButton.textContent = "Enviar mensaje";
 
     });
-
+    */
 });
 
 window.addEventListener("scroll", () => {

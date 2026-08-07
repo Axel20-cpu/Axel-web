@@ -1,3 +1,5 @@
+// API de contacto
+
 export default function handler(req, res){
     if (req.method !== 'POST') {
         return res.status(405).json({
@@ -5,8 +7,17 @@ export default function handler(req, res){
         });
     }
 
+    //Obtener los datos enviados desde el formulario
+    const { name, emial, message } = req.body;
+
+    //Mostrar los datos en los logs de vercel (solo para probar)
+    console.log("Nombre:", name);
+    console.log("Email:", emial);
+    console.log("Mensaje:", message);
+
+    //Respuesta temporal
     return res.status(200).json({
-        mensaje: "La API recibió la solicitud correctamente"
+        mensaje: "Datos recibidos correctamente."
     });
 }
 
