@@ -114,7 +114,7 @@ form.addEventListener("submit", async (event) => {
 
     //PRUEBA de comunicación con la API
 
-    const response = fetch("/api/contact", {
+    const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -168,7 +168,7 @@ form.addEventListener("submit", async (event) => {
         submitButton.textContent = "Enviar mensaje";
 
     });
-    
+
 });
 
 window.addEventListener("scroll", () => {
